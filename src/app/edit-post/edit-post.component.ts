@@ -34,7 +34,6 @@ export class EditPostComponent implements OnInit {
       this.post = this.postService.getPostbyId(this.route.snapshot.params['id'])
       .subscribe(data => {
         this.blogPost = data;
-        console.log(this.blogPost);
         this.tags = data.tags.toString();
       });
   }

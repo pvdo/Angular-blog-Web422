@@ -12,7 +12,6 @@ import {Router} from '@angular/router';
 export class NewPostComponent implements OnInit {
   blogPost: BlogPost = new BlogPost();
   tags: String;
-  querySub:any;
   constructor(private postService:PostService, private route:ActivatedRoute, private router:Router) { }
 
   formSubmit(){

@@ -11,7 +11,6 @@ import { BlogPost } from '../BlogPost';
 export class SearchWidgetComponent implements OnInit {
   blogPosts: Array<BlogPost> = [];
   searchText = '';
-  titles: Array<String> = [];
   constructor(private postService:PostService, private router:Router) { }
 
   searchClicked(post){
