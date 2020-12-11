@@ -2,10 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.use(express.static('./dist/web422-a5'));
+app.use(express.static('./dist/web422-a4'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: './dist/web422-a5'}
+    res.sendFile('index.html', {root: './dist/web422-a4'}
     );
 });
 
