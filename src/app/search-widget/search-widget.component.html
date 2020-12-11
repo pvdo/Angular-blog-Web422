@@ -2,10 +2,17 @@
     <header>
       <h3 class="h6">Search the blog</h3>
     </header>
-    <form action="#" class="search-form">
+    <form action="#" >
       <div class="form-group">
-        <input type="search" placeholder="What are you looking for?">
+        <input type="searchText" name="searchText" [(ngModel)]="searchText" placeholder="Type the title of the post" >
         <button type="submit" class="submit"><i class="icon-search"></i></button>
       </div>
+      <ul style="position: absolute;" class="list-group list-group-flush">
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <li class="list-group-item" *ngFor="let post of blogPosts | appFilter: searchText">
+
+        <span style="cursor: pointer;"*ngIf="post._id" (click)="searchClicked(post)">{{post.title}}</span>
+        </li>
+      </ul>
     </form>
   </div>

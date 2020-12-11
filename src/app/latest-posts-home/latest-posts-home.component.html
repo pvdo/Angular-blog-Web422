@@ -4,7 +4,7 @@
         <h2>Latest from the blog</h2>
         <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </header>
-      <div class="row">
+      <div class="row" *ngIf="posts">
         <div *ngFor="let post of posts" class="post col-md-4">
             <div class="post-thumbnail"><a [routerLink]="['/post', post._id]"><img src="{{post.featuredImage}}" alt="..." class="img-fluid imgSize"></a></div>
             <div class="post-details">

@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { PostsTableComponent } from './posts-table/posts-table.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { FilterPipe } from './filter-pipe';
  
 @NgModule({
   declarations: [
@@ -52,6 +53,8 @@ import { NewPostComponent } from './new-post/new-post.component';
     EditPostComponent,
     
     NewPostComponent,
+    
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

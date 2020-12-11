@@ -1,6 +1,6 @@
 
 
-<div class="latest-posts"> 
+<div class="latest-posts" *ngIf="posts"> 
     <div *ngFor="let post of posts" class="post">
         <a [routerLink]="['/post', post._id]">
             <div class="post d-flex align-items-center">

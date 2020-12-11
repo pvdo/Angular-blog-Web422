@@ -2,7 +2,7 @@
     <header>
         <h3 class="h6">Latest Posts</h3>
     </header>
-    <div class="blog-posts">
+    <div class="blog-posts" *ngIf="posts">
         <a *ngFor="let post of posts" [routerLink]="['/post', post._id]">
             <div class="item d-flex align-items-center">
             <div class="image" style="height: 40px;"><img src={{post.featuredImage}} alt="..." class="img-fluid"></div>

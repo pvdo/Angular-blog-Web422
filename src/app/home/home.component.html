@@ -22,7 +22,7 @@
   <section class="featured-posts no-padding-top">
     <div class="container">
       <!-- Posts-->
-      <app-post-home-card [posts]="homePosts.slice(0,3)"></app-post-home-card>
+      <app-post-home-card *ngIf="homePosts"[posts]="homePosts.slice(0,3)"></app-post-home-card>
     </div>
   </section>
   <!-- Divider Section-->
